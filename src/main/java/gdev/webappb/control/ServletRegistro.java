@@ -6,8 +6,9 @@
 
 package gdev.webappb.control;
 
-import gdev.webappb.model.Perro;
+import gdev.webappb.model.Mascota;
 import gdev.webappb.model.Persona;
+import gdev.webappb.model.gato;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -34,10 +35,9 @@ public class ServletRegistro extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        Perro perro=new Perro();
-        perro.setNombre("floky");
-        Persona x=new Persona();
-        x.setPerro(perro);
+        Mascota mascota=new gato();
+         Persona x=new Persona();
+        x.setMascota(mascota);
        request.setAttribute("registro", x);
        RequestDispatcher despachador=request.getRequestDispatcher("/registro.jsp");
        despachador.forward(request, response);
